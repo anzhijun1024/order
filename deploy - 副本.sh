@@ -8,15 +8,26 @@ export PROJ_PATH=/software/tomcat9/webapps/jenkins
 # 输入你的环境上tomcat的全路径
 export TOMCAT_APP_PATH=/software/tomcat9
 
-
-
-
+### base 函数
+killTomcat()
+{
+    # pid=`ps -ef|grep tomcat|grep java|awk '{print $2}'`
+    # echo "tomcat Id list :$pid"
+    # if [ "$pid" = "" ]
+    # then
+    #  echo "no tomcat pid alive"
+    # else
+    #  kill -9 $pid
+    # fi
+    #上面注释的或者下面的
+    cd $TOMCAT_APP_PATH/bin
+    sh shutdown.sh
+}
 cd $PROJ_PATH/order
 mvn clean install
 
-cd $TOMCAT_APP_PATH/bin
-sh shutdown.sh
-
+# 停tomcat
+killTomcat
 
 # 删除原有工程
 rm -rf $TOMCAT_APP_PATH/webapps/ROOT
