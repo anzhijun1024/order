@@ -6,7 +6,7 @@
 export PROJ_PATH=/software/tomcat9/webapps/jenkins
 
 # 输入你的环境上tomcat的全路径
-export TOMCAT_APP_PATH=/software/tomcat9/
+export TOMCAT_APP_PATH=/software/tomcat9
 
 ### base 函数
 killTomcat()
