@@ -3,10 +3,10 @@
 
 #需要配置如下参数
 # 项目路径, 在Execute Shell中配置项目路径, pwd 就可以获得该项目路径
-export PROJ_PATH=/software/tomcat9/webapps/jenkins
+# export PROJ_PATH=/software/tomcat9/webapps/jenkins
 
 # 输入你的环境上tomcat的全路径
-export TOMCAT_APP_PATH=/software/tomcat9
+# export TOMCAT_APP_PATH=/software/tomcat9
 
 
 
@@ -25,7 +25,7 @@ killTomcat()
     cd $TOMCAT_APP_PATH/bin
     sh shutdown.sh
 }
-cd $PROJ_PATH/order
+cd /root/jenkins/workspace/goujianorder/goujianorder
 mvn clean install
 
 # 停tomcat
