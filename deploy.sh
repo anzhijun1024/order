@@ -10,7 +10,7 @@ export TOMCAT_APP_PATH=/software/tomcat9
 
 
 
-
+cd /
 cd $PROJ_PATH/order
 mvn clean install
 
